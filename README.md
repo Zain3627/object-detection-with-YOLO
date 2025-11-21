@@ -9,7 +9,6 @@ object_detection/
 ├── 01_data_preparation.ipynb    # Model download and test image preparation
 ├── 02_object_detection.ipynb    # Main detection implementation
 ├── 03_model_evaluation.ipynb    # Performance testing and evaluation
-├── simple_detector.py           # Standalone Python script
 ├── models/                      # Saved models
 ├── test_images/                 # Sample test images
 ├── results/                     # Detection results
@@ -18,7 +17,7 @@ object_detection/
 
 ## 🚀 Quick Start
 
-### Option 1: Using Jupyter Notebooks (Recommended for beginners)
+### Using Jupyter Notebooks
 
 1. **Prepare Data and Model**
    ```bash
@@ -38,13 +37,6 @@ object_detection/
    ```
    Speed testing, confidence analysis, and robustness evaluation.
 
-### Option 2: Using Python Script
-
-```bash
-# Direct detection on any image
-python simple_detector.py path/to/your/image.jpg
-```
-
 ## 📖 Usage Examples
 
 ### In Jupyter Notebook:
@@ -55,14 +47,6 @@ result = detect_user_image('path/to/your/image.jpg', confidence=0.5)
 # Or use the ObjectDetector class directly
 detector = ObjectDetector()
 results, annotated_image = detector.detect_objects('your_image.jpg')
-```
-
-### Command Line:
-```bash
-# Detect objects in an image
-python simple_detector.py test_images/sample_1.jpg
-
-# Results will be saved in results/ folder
 ```
 
 ## 🛠️ Requirements
@@ -98,7 +82,6 @@ pip install ultralytics opencv-python matplotlib numpy pillow
 - ✅ Speed benchmarking
 - ✅ Robustness testing
 - ✅ Automatic result saving with annotations
-- ✅ Command-line interface
 - ✅ Visual results with side-by-side comparison
 
 ## 📈 Performance Features
@@ -146,6 +129,23 @@ The evaluation notebook provides:
 The model can detect 80 different object types including:
 - **People & Animals**: person, dog, cat, horse, sheep, cow, etc.
 - **Vehicles**: car, motorcycle, airplane, bus, train, truck, boat
+- **Everyday Objects**: chair, table, bottle, cup, book, laptop, phone
+- **Food**: banana, apple, sandwich, pizza, donut, cake
+- **Sports**: sports ball, tennis racket, baseball bat, skateboard
+- And many more!
+
+## 📝 Next Steps
+
+- Experiment with different confidence thresholds
+- Try your own images
+- Analyze the performance metrics
+- Consider upgrading to larger YOLO models for better accuracy
+- Implement video detection
+- Add custom object classes
+
+## 📄 License
+
+This project uses the YOLOv8 model from Ultralytics. Please check their license for commercial usage.
 - **Everyday Objects**: chair, table, bottle, cup, book, laptop, phone
 - **Food**: banana, apple, sandwich, pizza, donut, cake
 - **Sports**: sports ball, tennis racket, baseball bat, skateboard
